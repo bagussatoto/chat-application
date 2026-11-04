@@ -9,13 +9,13 @@ const routes = [
 	},
 	{
 		name: 'Chat',
-		path: '/chat',
+		path: '/chat/:id',
 		component: () => import('@/views/Chat.vue')
 	}
 ]
 
 const router = createRouter({
-	history: createWebHistory(process.env.BASE_URL),
+	history: createWebHistory(import.meta.env.BASE_URL),
 	routes
 })
 
